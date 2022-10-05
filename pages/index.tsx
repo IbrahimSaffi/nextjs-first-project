@@ -1,12 +1,14 @@
 import Head from 'next/head'
 import Container from '../components/Container'
-let apiKey = "66744fff52a2b0b6cdc47cb0be4ffe35"
+let apiKey: string = "66744fff52a2b0b6cdc47cb0be4ffe35"
 
-export default function Home(movies) {
+export default function Home({movies}) {
   return (
-    <div>
+    <div >
       <Head>
         <title>Week in Movies</title>
+        <link rel="shortcut icon" href="./favicon.png" />
+
         <meta />
       </Head>
     <Container movies={movies}/>   
