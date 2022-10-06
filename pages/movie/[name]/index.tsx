@@ -15,12 +15,12 @@ export default function MoviesPage({trailer,genres}) {
         <p className=" my-2">{movie.overview}</p>
         <div className="flex gap-2" >
            {movie.genre_ids.map((ele :string)=>{
-            return <h3 className="text-black rounded-10p bg-white p-10p"> {genres.find((gen:any)=>gen["id"]===ele)["name"]}</h3>
+            return <h3 key={ele} className="text-black rounded-10p bg-white p-10p"> {genres.find((gen:any)=>gen["id"]===ele)["name"]}</h3>
           })} 
         </div>
         <div className="flex items-center justify-start gap-1" >
         <button className=" w-s-15 h-s-6 border-none rounded-15p">
-           <a className="text-black no-underline flex flex-row justify-center items-center text-sm gap-3 bg-white rounded-lg font-bold h-11 mt-5" href={`https://www.youtube.com/watch?v=${trailer.key}`} target ="_blank">
+           <a className="text-black no-underline flex flex-row justify-center items-center text-sm gap-3 bg-white rounded-lg font-bold h-11 mt-5" href={`https://www.youtube.com/watch?v=${trailer.key}`} target ="_blank" rel="noreferrer">
           <p>Watch Trailer </p>
           <img className=" h-3/4" src="../play.png" alt=""  />
           </a> 

@@ -12,7 +12,7 @@ interface Props {
 }
 function MovieCard(props:Props) {
   return (
-    <Link href={{pathname:`/movie/${props.title.split(" ").join("-")}`,query:{movie:JSON.stringify(props.movieDetail)}}}>
+    <Link rel="noreferrer" href={{pathname:`/movie/${props.title.split(" ").join("-")}`,query:{movie:JSON.stringify(props.movieDetail)}}}>
       <div className="relative text-white w-17pt cursor-pointer mb-2"  >
         <img className=" border-none border-4 h-[300px] w-full rounded-10p " src={`https://image.tmdb.org/t/p/w500${props.poster}`} alt="" />
         <div className=" group absolute h-full w-full bg-transparent z-1 top-0">
